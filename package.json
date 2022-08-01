@@ -1,0 +1,21 @@
+{
+  "name": "daily-login",
+  "version": "1.0.0",
+  "description": "FINNOMENA daily login for get rewards",
+  "scripts": {
+    "start": "node ./src/daily-login.js",
+    "job": "node ./src/daily-login.js",
+    "test": "node ./src/test/index.js"
+  },
+  "author": "Athip Chaipiriyasak",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.14.6"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cron": "^1.8.2",
+    "dotenv": "^10.0.0",
+    "mysql": "^2.18.1"
+  }
+}

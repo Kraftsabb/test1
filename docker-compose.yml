@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  daily-login:
+    container_name: daily-login
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - ./.env
+    restart: unless-stopped
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+    networks:
+      - mysql_network
+networks:
+  mysql_network:
+    driver: bridge
+    external: true
